@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Happy Aprilfool!</title>
-        <link rel="shortcut icon" href="TemplateData/favicon.ico">
+        <title>Happy Aprilfool!!</title>
+        <link rel="shortcut icon" href="images/SlimeManaIcon.jpg">
     </head>
 <body>
     <div class="main">
-        <h1>Oops</h1>
+        <h1>Oops!</h1>
         <p><img src="images/SlimeManaIcon.jpg"></p>
+        <script type="text/javascript">
+            var imglist = new Array(
+               "images/SlimeManaIcon.jpg",
+               "images/sra.png" );
+            var selectnum = Math.floor(Math.random() * imglist.length);
+            var output = "<img src=" + imglist[selectnum] + ">";
+            document.write(output);
+         </script>
     </div>
 </body>
 </html>
