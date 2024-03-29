@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Happy Aprilfool!!</title>
+        <title>エイプリルフールのゲーム</title>
         <link rel="shortcut icon" href="images/SlimeManaIcon.jpg">
-    </head>
-<body>
-    <div class="main">
-        <h1>Oops!</h1>
-        <div class="pswp-gallery"><figure style ="width:400px;" class="wp-caption alignnone"><a href='https://lh3.googleusercontent.com/pw/AP1GczPMmoRFG71xs00JIOcE1RW1IATN3zQ-4hoYOTC83YCccn2h9GiDjhrn2YRcqMNyS8leLTW9SyZl8Fz78DK92L3krr-JrU2P-bRMrCNqk5zBkAV1DTw=w1600-h1200' data-size='1600x1200' target='_blank' rel='noopener'><img width="400" height="300" src="https://lh3.googleusercontent.com/pw/AP1GczPMmoRFG71xs00JIOcE1RW1IATN3zQ-4hoYOTC83YCccn2h9GiDjhrn2YRcqMNyS8leLTW9SyZl8Fz78DK92L3krr-JrU2P-bRMrCNqk5zBkAV1DTw=w800-h600" class="photoembed-maker" ></a></figure></div>
-        <p><img src="images/SlimeManaIconExif.jpg"></p>
-        <p><img src="images/exiftest.jpg"></p>
+        
         <script type="text/javascript">
             var imglist = new Array(
-               "images/SlimeManaIcon.jpg",
+               "images/SlimeManaIconExif.jpg",
                "images/sara.png" );
             var selectnum = Math.floor(Math.random() * imglist.length);
             var output = "<img src=" + imglist[selectnum] + ">";
-            document.write(output);
+            var count = 1;
+            function showimage(){
+                img = document.getElementById("image_file");
+                img.src = imglist[count % imglist.length];
+                count += 1;
+            }
         </script>
-    </div>
-</body>
+    </head>
+    
+    <body style="text-align:center">
+        <div class="main">
+            <h1>Happy Aprilfool!!</h1>
+            <input type="button" value="ゲームスタート" onClick="showimage()"><br><br><br>
+            <img id="image_file"src=""width=400>
+            
+        </div>
+    </body>
 </html>
